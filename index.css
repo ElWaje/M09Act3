@@ -1,0 +1,219 @@
+body, html {
+    background-color: #f0f0f0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; 
+  }
+  
+  article, section, img, div {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+  }
+  
+  .centrar {
+    text-align: center;
+  }
+  
+  .contenedorSlider {
+    width: 90%;
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  
+  .green {
+      color: green;
+  }
+
+  .red {
+      background-color: red;
+  }
+
+  .background-gray {
+      background-color: #f0f0f0;
+  }
+
+  .yellow {
+      background-color: yellow;
+  }  
+  
+  .selectOperation > div, 
+  #divTarget {
+    left: 70px;
+    top: 50%;
+    border: 1px solid #99CCFF;
+    margin: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    width: calc(15% - 10px);
+    padding: 2px;
+    padding-top: 4px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+    
+  .selectOperation > div {
+    margin-left: 0;
+  }
+
+
+  .selectOperation > div:hover {
+    box-shadow: -1px 0 10px #99CCFF;
+  }  
+  
+  #leftHand, #rightHand {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  
+  #leftHand img, #rightHand img {
+    height: 100%;
+  }
+  
+  #leftHand {
+    left: 0;
+    top: 50%;
+    height: 50px;
+    width: 30px;
+    transform: translateY(-50%);
+  }
+  
+  #rightHand {
+    right: 0;
+    top: 50%;
+    height: 50px;
+    width: 30px;
+    transform: translateY(-50%);
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate-animation {
+    animation: rotation 2s linear infinite;
+  }
+  
+  #domNodes {
+    border: 1.5px solid #ffcc00;
+    margin: 0;
+  }
+  
+  #domNodes h3 {
+    text-align: center;
+  }
+  
+  #domNodes > div {
+    border: 1px solid #ffcc00;
+    margin: 5px;
+    min-height: 50px;
+    width: 75px;
+  }
+  
+  .addDiv {
+    margin-top: 5px;
+    border-color: #F8AC00;
+  }
+  
+  .delText {
+    border-color: #008000;
+    background-color: #ADFF2F;
+  }
+  
+  .setContent {
+    border-color: #FFCC99;
+  }
+  
+  .selectOperation > input {
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+  
+  .delNode {
+    border-color: #A9ED86;
+  }
+
+  .contenedorSlider {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .slider-controls button {
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .slider-prev {
+    margin-right: auto;
+  }
+
+  .slider-next {
+    margin-left: auto;
+  }
+  .slick-slide {
+    margin: 0 5px;
+    text-align: center;
+    position: relative;    
+  }
+  
+  .slick-slide h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .selectOperation > div,
+    #divTarget {
+      width: calc(33% - 10px);
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .slick-prev,
+    .slick-next {
+      display: block;
+      background-color: green;
+      color: red;
+      font-size: 16px;
+      border-radius: 3px;
+      padding: 6px 12px;
+      z-index: 1;
+    }
+  
+    .slick-prev:hover,
+    .slick-next:hover {
+      background-color: #66B2FF;
+    }
+  }
